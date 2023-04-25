@@ -6,6 +6,8 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class BookRepository {
     @Autowired
@@ -18,4 +20,10 @@ public class BookRepository {
         // ㄴ insert 매개변수(매퍼를 호출할 변수,실제 쿼리에 적용할 값)
 
     }
+
+    public List<BookDTO> findAll() {
+        return sql.selectList("Book.findAll");
+    }
+
+
 }

@@ -9,6 +9,12 @@
         values (#{bookName},#{bookPublisher},#{bookAuthor},#{bookPrice} )
     </insert>
 
+    <select id="findAll" resultType="book">
+        select * from book_table
+
+    </select>
+
+
 </mapper>
 
 

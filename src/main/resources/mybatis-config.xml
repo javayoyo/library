@@ -3,6 +3,6 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-
+    <typeAlias type="com.icia.lib.dto.BookDTO" alias="book"></typeAlias>
     </typeAliases>
 </configuration>

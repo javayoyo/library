@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Service
 public class BookService {
 
@@ -18,9 +20,17 @@ public class BookService {
     public int save(BookDTO bookDTO) {
         System.out.println("bookDTO = " + bookDTO);
         int result = bookRepository.save(bookDTO);
-        return 0;
+        return result;
 
     }
 
+    public List<BookDTO> findAll() {
+        List<BookDTO> bookDTOList = bookRepository.findAll();
+        if(bookDTOList.size() == 0) {
+            return null;
+        }else {
+            return bookDTOList;
+        }
+    }
 
 }
