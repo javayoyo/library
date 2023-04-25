@@ -30,25 +30,16 @@ public class BookController {
         int saveResult = bookService.save(bookDTO);
         model.addAttribute("result", saveResult);
         return "saveResult";
-
     }
 
-
     @GetMapping("/list")
-    public String findAll() {
+    public String findAll(Model model) {
         List<BookDTO> bookDTOList = bookService.findAll();
         for (BookDTO bookDTO: bookDTOList) {
             System.out.println("bookDTO = " + bookDTO);
         }
-
-
+        model.addAttribute("bookList", bookDTOList);
         return "list";
 
     }
-
-
-
-
-
-
 }
