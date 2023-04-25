@@ -19,9 +19,7 @@
         alert("뭘 잘못했니?");
         location.href = "/save";
     }
-
   </script>
-
 </head>
 
 <body>
