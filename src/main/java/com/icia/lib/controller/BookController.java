@@ -14,7 +14,6 @@ import java.util.List;
 @Controller
 public class BookController {
     // BookService 의존성 주입(필드주입)
-
     @Autowired
     private BookService bookService;
 
