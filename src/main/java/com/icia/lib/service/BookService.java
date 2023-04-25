@@ -17,6 +17,7 @@ public class BookService {
 
     public int save(BookDTO bookDTO) {
         System.out.println("bookDTO = " + bookDTO);
+        int result = bookRepository.save(bookDTO);
         return 0;
 
     }

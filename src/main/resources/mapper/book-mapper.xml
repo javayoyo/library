@@ -3,7 +3,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<mapper namespace="">
+<mapper namespace="Book">
+    <insert id="save" parameterType="com.icia.lib.dto.BookDTO">
+        insert into book_table(bookName, bookPublisher, bookAuthor, bookPrice)
+        values (#{bookName},#{bookPublisher},#{bookAuthor},#{bookPrice} )
+    </insert>
 
 </mapper>
 
