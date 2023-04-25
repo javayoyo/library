@@ -13,7 +13,7 @@
 <body>
 <h2>index 입니당</h2>
 <a href="/save">save 출력</a>
-<%--<a href="/detail">detail 출력</a>--%>
+<a href="/detail">detail 출력</a>
 <a href="/list">list 출력</a>
 
 </body>
