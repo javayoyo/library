@@ -22,10 +22,25 @@ public class BookService {
     }
     public List<BookDTO> findAll() {
         List<BookDTO> bookDTOList = bookRepository.findAll();
-        if(bookDTOList.size() == 0) {
+        if (bookDTOList.size() == 0) {
             return null;
-        }else {
+        } else {
             return bookDTOList;
         }
     }
+
+        public BookDTO findById(Long id){
+            return bookRepository.findById(id);
+        }
+
+        public void  update(BookDTO bookDTO) {
+        bookRepository.update(bookDTO);
+        }
+
+    public void delete(Long id) {
+        bookRepository.delete(id);
+    }
+
+
+
 }

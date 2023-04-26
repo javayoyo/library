@@ -15,6 +15,22 @@
     </select>
 
 
+    <select id="findById" parameterType="Long" resultType="book">
+    select * from book_table where id=#{id}
+
+    </select>
+
+    <update id="update" parameterType="book">
+        update book_table set bookName=#{bookName}, bookPrice=#{bookPrice}
+        where id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="Long">
+        delete from book_table where id=#{id}
+    </delete>
+
+
+
 </mapper>
 
 

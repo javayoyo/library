@@ -10,7 +10,7 @@ import lombok.ToString;
 
 public class BookDTO {
 
-    private Long id;
+    private long id;
     private String bookName;
     private String bookPublisher;
     private String bookAuthor;

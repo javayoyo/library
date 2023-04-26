@@ -12,6 +12,11 @@
 </head>
 <body>
 <h2>detail 입니다</h2>
+id: ${book.id} <br>
+name ${book.bookName} <br>
+publisher: ${book.bookPublisher} <br>
+author : ${book.bookAuthor} <br>
+price: ${book.bookPrice}<br>
 
 </body>
 </html>

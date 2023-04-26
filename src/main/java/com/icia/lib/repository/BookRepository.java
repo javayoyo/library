@@ -18,8 +18,23 @@ public class BookRepository {
         return sql.insert("Book.save", bookDTO);
         // ㄴ insert 매개변수(매퍼를 호출할 변수,실제 쿼리에 적용할 값)
     }
+
     public List<BookDTO> findAll() {
         return sql.selectList("Book.findAll");
+    }
+
+
+    public BookDTO findById(Long id) {
+        return sql.selectOne("Book.findById", id);
+    }
+
+    public void update(BookDTO bookDTO) {
+        sql.update("Book.update", bookDTO);
+    }
+
+
+    public void delete(Long id) {
+        sql.delete("Book.delete", id);
     }
 
 }
